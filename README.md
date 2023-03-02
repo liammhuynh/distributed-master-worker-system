@@ -1,7 +1,9 @@
 # Distributed-master-worker-system
 
 Blaine Steck
+
 Melisa Nguyen
+
 Thuy Huynh
 
 This code implements a distributed information retrieval system using XML-RPC protocol. The system consists of a master server and two worker servers that handle user queries. 
