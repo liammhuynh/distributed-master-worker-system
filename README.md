@@ -28,7 +28,7 @@ The master server has several functions:
 
     monitor_workers(): This function periodically checks the status of each worker by sending ping requests to them.
 
-The worker server has four functions:
+The worker server has these functions:
 
     ping(): This function returns a ping response to the master server to indicate that the worker is still alive.
 
