@@ -5,8 +5,14 @@ import json
 # Storage of data
 data_table = {}
 
+def ping():
+    return {
+        'error': False,
+        'result': True
+    }
+
 def load_data(group):
-    # TODO load data based which portion it handles (am or nz)
+    # load data based which portion it handles (am or nz)
     global data_table
     if group == 'am':
         with open('data-am.json') as f1, open('data-nz.json') as f2:
@@ -77,11 +83,12 @@ def main():
 
     load_data(group) # load the data based on the group parameter
 
-    # TODO register RPC functions
+    # register RPC functions
     server.register_function(getbyname)
     server.register_function(getbylocation)
     server.register_function(getbyyear)
-    
+    server.register_function(ping)
+
     server.serve_forever()
 
 if __name__ == '__main__':
